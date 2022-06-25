@@ -14,3 +14,48 @@ body {
   overflow: hidden;
   margin: 0;
   }
+
+.container {
+  display: flex;
+  width: 90vw;
+  }
+
+
+.panel {
+  /*css below is for background image*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /*below css will determine the height of the panel*/
+  height: 80vh;
+  
+  /**/
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  /**/
+  flex: 0.5;
+  margin: 10px;
+  /*Giving the panel position relative so we can position the items in it later.*/
+  position: relative;
+  
+  transition: flex 0.7s ease-in;
+  }
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  }
+
+.panel.active {
+  flex: 5;
+  }
+
+.panel.active h3 {
+  opacity: 1;
+  }
